@@ -145,7 +145,7 @@ secom_linear = function(data, assay_name = "counts", tax_level = NULL,
                         thresh_hard = 0, max_p = 0.005, n_cl = 1) {
     # ===========Sampling fraction and absolute abundance estimation============
     if (length(data) == 1) {
-        tse_obj = tse_construct(data = data[[1]], assay_name = assay_name[1],
+        tse_obj = tse_construct(data = data, assay_name = assay_name[1],
                                 tax_level = tax_level[1], phyloseq = NULL)
         abn_list = abn_est(tse = tse_obj$tse, tax_level = tse_obj$tax_level,
                            assay_name = tse_obj$assay_name, pseudo = pseudo,
